@@ -1,5 +1,6 @@
 # Mon site
-Réalisation d'un site web dans le cadre de l'option ICN
+Réalisation d'un site web dans le cadre de l'option ICN (Information et
+Création Numérique)
 
 ## Contenu
 
