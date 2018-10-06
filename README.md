@@ -3,11 +3,13 @@ Réalisation d'un site web dans le cadre de l'option ICN
 
 ## Contenu
 
-Le site continet des pages en rapport avec mes activités:
+Le site contient des pages en rapport avec mes activités de modélisateur 3D
+sur Blender
 
-* blender
-* musique
-* ...
+* Images
+* Vidéos
+* Un Forum pour proposer des idées de projets
 
 ## Réalisation
 
+J'utilise PHP, HTML5 et MySQL
