@@ -164,7 +164,7 @@ font-family: Arial, "Times New Roman", Times, sans-serif ;
 .Formular
 {
         /* text */
-  text-align: left;
+  text-align: center;
   text-indent: 30px;
   color: white;
   line-height: 300%;
@@ -175,9 +175,47 @@ font-family: Arial, "Times New Roman", Times, sans-serif ;
   padding-left: 20px, solid green;
   margin-right: auto;
   margin-left: 30%;
-  margin-top: 10%;
+  margin-top: 3%;
   padding: 10px;
   border: 10px dotted orange;
   background-color: #474C55;
 
+}
+
+.MinichatPage
+{
+  /* text */
+text-align: center ;
+text-indent: 30px;
+color: white;
+  /* font */
+font-size: x-large;
+  /* box */
+width: 100%;
+margin-right: auto;
+padding: 10px;
+border: 10px dotted orange;
+background-color: #474C55;
+
+}
+#Messages_minichat
+{
+  /* text */
+text-align: justify;
+text-indent: 30px;
+color: white  ;
+line-height: 200%;
+  /* font */
+font-size: x-large;
+  /* box */
+  width: 30%;
+  padding-left: 20px, solid green;
+  margin-right: auto;
+  margin-left: 22%;
+  margin-top: 20px;
+  padding: 10px;
+
+
+/* retours à la ligne */
+word-wrap: break-word;
 }

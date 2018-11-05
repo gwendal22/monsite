@@ -8,7 +8,7 @@
   <meta name="description" content="The HTML5 Herald">
   <meta name="Breizh_Dalek" content="SitePoint">
 
-  <link rel="stylesheet" href="Site.css?v=1.0">
+  <link rel="stylesheet" href="./css/Site.css?v=1.0">
 
 </head>
 
@@ -16,11 +16,11 @@
   <div class="Formular">
 
     <h1>Join the Forum</h1>
-    <form method="post" action="mettre la vraie cible .php">
+    <form method="post" action="cible_site_blender.php">
       <p>
         User Name:<input type="text" name="Name"/> <br/>
         Password:<input type="password" name="password"/> <br/>
-        Country:<select>
+        Country:<select name="country">
 	<option value="AF">Afghanistan</option>
 	<option value="AX">Åland Islands</option>
 	<option value="AL">Albania</option>
@@ -273,8 +273,8 @@
 </select> <br/>
 
 
-    <input type="radio" name="case1" /><label for="case">Professional</label>
-    <input type="radio" name="case2" /><label for="case">Amateur</label></br>
+    <input type="radio" name="case" value="professional" id="amateur"/><label for="case">Professional</label>
+    <input type="radio" name="case" value="amateur" id="amateur"/><label for="case">Amateur</label></br>
 
     <input type="submit" value="Sign in" id="Sign_in"/>
 

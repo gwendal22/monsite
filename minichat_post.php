@@ -16,28 +16,42 @@
 
 <?php
 
-$name = $_POST['name'];
-$message = $_POST['message'];
-
-try
+if (isset($_POST['name']) AND isset($_POST['message'])) // Si les variables existent
 {
-    $bdd = new PDO('mysql:host=localhost;dbname=mon site;charset=utf8', 'root', '');
+   if ($_POST['name'] != NULL AND $_POST['message'] != NULL) // Si on a quelque chose à enregistrer
+   {
+   $name = $_POST['name'];
+   $message = $_POST['message'];
+  try
+  {
+      $bdd = new PDO('mysql:host=localhost;dbname=mon site;charset=utf8', 'root', '');
+    }
+    catch(Exception $e)
+    {
+          die('Erreur : '.$e->getMessage());
+        }
+
+        $donnees = $bdd->prepare('INSERT INTO chatmembers(ID, Username, Message) VALUES("", :nom, :message)');
+        $donnees->execute(array(
+          'nom' => $name,
+          'message' => $message
+        ));
+
+        echo 'Message sent';
+
+        header('Location: minichat.php');
 }
-catch(Exception $e)
+else
 {
-        die('Erreur : '.$e->getMessage());
+  echo 'No message';
+  header('Location: minichat.php');
 }
-
-$donnees = $bdd->prepare('INSERT INTO chatmembers(ID, Username, Message) VALUES("", :nom, :message)');
-$donnees->execute(array(
-  'nom' => $name,
-  'message' => $message
-));
-
-echo 'Message sent';
-
-header('Location: minichat.php');
-
+}
+else
+{
+  echo 'No message';
+  header('Location: minichat.php');
+}
 ?>
 
 

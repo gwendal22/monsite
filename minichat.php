@@ -15,21 +15,20 @@
 <body id="Minichat">
 
 
-  <div class="Formular">
+  <div class="MinichatPage">
 
     <h1>Minichat</h1>
+    <a href="./index.html">Main page</a>
 
-    <form method="post" action="minichat_post.php">
+    <form method="post" action="minichat_post.php" class="Formular" id="usrform">
       <p>
 
         Username:<input type="text" name="name" placeholder="Username" /></br>
-        Message: <input type="textarea" name="message" rows="8" cols="45" placeholder="Your message"/></br>
+        <textarea name="message" rows="8" cols="80" form="usrform"></textarea></br>
         <input type="submit" value="send"/></br>
-
-
       </p>
     </form>
-
+  <div id="Messages_minichat">
     <?php
     try
     {
@@ -40,13 +39,15 @@
         die('Erreur : ' . $e->getMessage());
     }
     $elements_minichat = $bdd->query('SELECT * FROM chatmembers ORDER BY ID DESC LIMIT 0,10 ');
+
     while ($messages_affiches = $elements_minichat->fetch())
     {
       echo "<p><strong>".htmlspecialchars($messages_affiches['Username'])."</strong></br>".htmlspecialchars($messages_affiches['Message'])."</p>";
       // echo .htmlspecialchars($messages_affiches['name'])..htmlspecialchars($messages_affiches['message']);
     }
-    // $elements_minichat->closeCursor();
+     $elements_minichat->closeCursor();
     ?>
+  </div>
   </div>
 </body>
 </html>
